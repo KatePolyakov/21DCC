@@ -24,11 +24,8 @@ Output:
     Mission Control: Hello there!
 //////
 
-const parseMissionSummary = (exchanges, missionData) => {
-  // Code here!
-  let messageArray = [];
-  for (let message of exchanges){
-    messageArray.push(`${message.origin}: ${message.message}`)
-  }
-  return {transcript: messageArray, missionData};
+const parseMessage = (origin, message) => {
+var sum = origin + ": "+ message;
+return sum;
 }
+console.log(parseMessage("Mission Control", "Hello there!"));
